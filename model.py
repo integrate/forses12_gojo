@@ -96,8 +96,8 @@ def boom(timer):
         modo = 'explosion'
     if modo == 'explosion':
         print(time.time()-d)
-        if  time.time()-d>=3:
+        if  time.time()-d>=1:
             for a in h:
-                a['speedx'] = random.randint(-18, 18)
-                a['speedy'] = random.randint(-18, 18)
+                a['speedx'] = random.choice([random.randint(-18,-8),random.randint(8,18)])
+                a['speedy'] = random.choice([random.randint(-18,-8),random.randint(8,18)])
             modo = 'slowdown'
